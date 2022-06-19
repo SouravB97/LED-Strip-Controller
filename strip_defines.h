@@ -44,13 +44,13 @@
 //	STATE4  //cloud colours  (its calming, so it gets its own mode)
 //};
 #define STATE(N) (N)
-#define LAST_STATE STATE(15)
+#define LAST_STATE STATE(16)
 typedef uint8_t device_state_e ;
 
 enum button_state_e {ON, OFF, LONG_PRESS};
 
 button_state_e button_state = OFF;
-device_state_e device_state = STATE(2); //initial state
+device_state_e device_state = STATE(6); //initial state
 
 CRGBPalette16 currentPalette  = PartyColors_p;
 TBlendType    currentBlending = LINEARBLEND;

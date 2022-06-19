@@ -67,29 +67,32 @@ void loop() {
 		case STATE(7): { //flowing water
 		 cycle_all_patterns(5, 60);
 		} break;
-		case STATE(8): { //random
+		case STATE(8): { //theater chase rainbow
+		 theaterChaseRainbow(75); // Rainbow-enhanced theaterChase variant
+		} break;
+		case STATE(9): { //random
 		 cycle_all_patterns(15, 60);
 		} break;
 		//solid colors
-		case STATE(9): {
+		case STATE(10): {
 		 colorWipe(strip.Color(255, 0, 0), 0); // Red
 		} break;
-		case STATE(10): {
+		case STATE(11): {
 		 colorWipe(strip.Color(0, 255, 0), 0); // Green
 		} break;
-		case STATE(11): {
+		case STATE(12): {
 		 colorWipe(strip.Color(0, 0, 255), 0); // Blue
 		} break;
-		case STATE(12): {
+		case STATE(13): {
 		 colorWipe(strip.Color(0, 255, 255), 0); // Cyan
 		} break;
-		case STATE(13): {
+		case STATE(14): {
 		 colorWipe(strip.Color(255, 0, 255), 0); // Magenta
 		} break;
-		case STATE(14): {
+		case STATE(15): {
 		 colorWipe(strip.Color(255, 255, 0), 0); // Yellow
 		} break;
-		case STATE(15): {
+		case STATE(16): {
 		 maxBrightnessWhite(); // MaxWhite
 		} break;
 		default:;
