@@ -99,7 +99,7 @@ void loop() {
 	}
 	
 	//monitoring user input
-	checkForLongPress();	
+	monitorUserInput();	
 
 	//blink_without_delay(LED_BUILTIN, 500);
 }

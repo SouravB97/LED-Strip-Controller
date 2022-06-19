@@ -247,7 +247,15 @@ void maxBrightnessWhite(){
 }
 
 int userGivingInput(){
-	return button_state != OFF;	
+		return button_state != OFF;	
+}
+
+void update_ledstrip_brightness(int brightness){
+  	BRIGHTNESS = (uint8_t) brightness;
+  	strip.setBrightness(brightness);
+  	FastLED.setBrightness(brightness);
+  	strip.show();
+  	FastLED.show();
 }
 
 // Additional notes on FastLED compact palettes:

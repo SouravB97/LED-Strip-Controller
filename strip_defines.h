@@ -5,14 +5,13 @@
 #define MUX_SEL 	 		D7
 #define BUTTON 		 		D2
 #define NUM_LEDS    	60
-#define BRIGHTNESS  	0xFF
 #define LED_TYPE    	WS2812B
 #define COLOR_ORDER 	GRB
 
 #define NUM_PATTERNS	22
 #define FAST_LED_PATTERN_RANGE 9
 #define MAX_WHITE_LEDS 30
-//#define SERIAL_DEBUG
+#define SERIAL_DEBUG
 
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = Arduino pin number (most are valid)
@@ -54,6 +53,7 @@ device_state_e device_state = STATE(6); //initial state
 
 CRGBPalette16 currentPalette  = PartyColors_p;
 TBlendType    currentBlending = LINEARBLEND;
+uint8_t BRIGHTNESS						= 0xFF;
 
 extern CRGBPalette16 myRedWhiteBluePalette;
 extern const TProgmemPalette16 myRedWhiteBluePalette_p PROGMEM;

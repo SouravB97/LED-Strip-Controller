@@ -16,6 +16,19 @@ void	serialDebugPrints(int print_delay){
 
 }
 
+void updateBrightnessFromSerial(){
+	if(Serial.available()){
+		while(Serial.available() > 0){
+			int brightness  = Serial.parseInt();
+
+			if(brightness < 0 || brightness > 255)
+				return;
+
+			Serial.print("Updating Brightness to : "); Serial.println(brightness);
+			update_ledstrip_brightness(brightness);
+		}
+	}
+}
 
 
 #endif
