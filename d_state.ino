@@ -29,7 +29,8 @@ void incrDeviceState(){
 
 void resetDeviceState(){
 	//next_state = current_state - 1; //retain exact state since pushing the button for sleep actually increments a state
-	next_state = current_state; 
+	next_state = current_state; //retain state
+	bext_state = STATE(1); //roll over state machine
 	current_state = STATE(0);
 	updateState();
 }
