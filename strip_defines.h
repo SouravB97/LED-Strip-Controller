@@ -11,7 +11,7 @@
 #define NUM_PATTERNS	22
 #define FAST_LED_PATTERN_RANGE 9
 #define MAX_WHITE_LEDS 30
-#define SERIAL_DEBUG
+//#define SERIAL_DEBUG
 
 // Parameter 1 = number of pixels in strip
 // Parameter 2 = Arduino pin number (most are valid)
